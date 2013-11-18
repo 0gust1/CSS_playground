@@ -1,0 +1,27 @@
+.to-wrap{position: relative;}
+
+.wrap{
+	display:inline-block;
+	position:relative;
+	background-color: pink;
+}
+
+.wrap, .rotated{
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	transition: all 1s;
+	transition-timing-function: ease-out;
+}
+
+.rotated{
+    position:relative;
+	-webkit-transform: translateY(-500px) rotate(470deg) translate(100px)  ;
+	-moz-transform: translateY(-500px) rotate(470deg) translate(100px) ;
+	-ms-transform: translateY(-500px) rotate(470deg) translate(100px) ;
+	transform: translateY(-500px) rotate(470deg) translate(100px) ;
+}
+
+
+blockquote{
+font-size:4em;
+}
