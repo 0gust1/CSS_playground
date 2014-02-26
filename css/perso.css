@@ -19,29 +19,27 @@
 
 }
 
-.wrapper.rotated:nth-of-type(2n){
-    animation-delay:-0.2s;
-
-    animation : wind2 2s ease-in 1; animation-fill-mode: both;
-}
-
-.wrapper.rotated:nth-of-type(3n){
-    animation-delay:-0.2s;
-
-    animation : wind3 2s ease-in 1; animation-fill-mode: both;
-}
-
 .rotated{
     position:relative;
     display:inline-block;
     animation : wind 2s ease-in 1; animation-fill-mode: both;
 }
 
-.logo{background:pink; display:inline-block; width:auto; margin:0 auto 0 auto; font-size:16em;
-    text-shadow:4px 4px 0px #ccc, 8px 8px 0px  #aaa;
-    animation:turn 10s ease-out infinite;}
+.wrapper.rotated:nth-of-type(2n){
+    animation-delay:-0.2s;
+    animation : wind2 2s ease-in 1; animation-fill-mode: both;
+}
 
-@keyframes slide {
+.wrapper.rotated:nth-of-type(3n){
+    animation-delay:-0.2s;
+    animation : wind3 2s ease-in 1; animation-fill-mode: both;
+}
+
+.logo{display:inline-block; color:#333; width:auto; margin:0 auto 0 auto; font-size:16em;
+    text-shadow:4px 0 1px #999, 0 4px 1px  #666, -4px 0 0 #ccc, 0 -4px 1px #444;
+    animation:turn 10s linear infinite;}
+
+@keyframes turn {
     0% {}
     50% {}
     100% {
