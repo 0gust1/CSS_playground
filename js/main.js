@@ -1,4 +1,4 @@
-var pp = (function() {
+var textSlicer = (function() {
 
 	var textSlicer = {};
 
@@ -49,22 +49,20 @@ var pp = (function() {
         }
 	};
 
-	// textSlicer.wrapWords = function(element, className){
-	// 	element.classList.add('word-wrapped');
-	// 	element.normalize();
-	// 	var text = element.textContent;
-	// 	var words = //.exec(text);
+	textSlicer.wrapWords = function(element, className){
+	//element.classList.add('word-wrapped');
+	//element.normalize();
+	//var text = element.textContent;
+	//var words = //.exec(text);
 
-	// };
+	};
 
 	return textSlicer;
 
 }());
 
-console.log(jQuery('.to-wrap').text());
 
-//pp.test();
-pp.wrapCharacters(document.querySelectorAll('.to-wrap'),'wrapped','span','wrapper');
+textSlicer.wrapCharacters(document.querySelectorAll('.to-wrap'),'wrapped','span','wrapper');
 
 // querySelector, jQuery style
 var $ = function(selector) {
@@ -93,14 +91,4 @@ for (var i = elements.length - 1; i >= 0; i--) {
    		}
 		
 	}, false);
-
-	// elements[i].addEventListener("mouseout", function(e) {
-	// 	if ( matches.call(e.target,'.to-wrap .wrap') ) {
- //     	 e.target.classList.remove("rotated");
- //   		}
-		
-	// }, false);
-
-    console.log(jQuery("body").html());
-
 }
