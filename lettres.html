@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="fr"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="fr"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="fr"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="fr"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/perso.pr.css">
+</head>
+<body>
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Intro</a></li>
+            <li><a href="mots.html">Mots</a></li>
+            <li><a href="lettres.html">Lettres</a></li>
+        </ul>
+    </nav>
+    <aside>
+        <ul>
+            <li><button type="button" id="btn-envol">envoler</button></li>
+            <li><button type="button" id="btn-deposer">déposer</button></li>
+        </ul>
+    </aside>
+</header>
+
+
+<article class="main">
+    <!-- Add your site or application content here -->
+    <h1>... Avec des lettres</h1>
+
+    <h2>Span</h2>
+    <h3>petit span</h3>
+            <span class="to-wrap anim-envol">
+            Sur la pente du talus les anges tournent leurs robes de laine dans les herbages d’acier et d’émeraude.
+
+Des prés de flammes bondissent jusqu’au sommet du mamelon. À gauche le terreau de l’arête est piétiné par tous les homicides et toutes les batailles, et tous les bruits désastreux filent leur courbe. Derrière l’arête de droite la ligne des orients, des progrès.
+
+Et tandis que la bande en haut du tableau est formée de la rumeur tournante et bondissante des conques des mers et des nuits humaines,
+
+La douceur fleurie des étoiles et du ciel et du reste descend en face du talus, comme un panier, — contre notre face, et fait l’abîme fleurant et bleu là-dessous.
+            </span>
+    <h3>gros span</h3>
+
+        <span class="to-wrap anim-deposer">
+            Sur la pente du talus les anges tournent leurs robes de laine dans les herbages d’acier et d’émeraude.
+
+Des prés de flammes bondissent jusqu’au sommet du mamelon. À gauche le terreau de l’arête est piétiné par tous les homicides et toutes les batailles, et tous les bruits désastreux filent leur courbe. Derrière l’arête de droite la ligne des orients, des progrès.
+
+Et tandis que la bande en haut du tableau est formée de la rumeur tournante et bondissante des conques des mers et des nuits humaines,
+
+La douceur fleurie des étoiles et du ciel et du reste descend en face du talus, comme un panier, — contre notre face, et fait l’abîme fleurant et bleu là-dessous.
+        </span>
+    <a href="https://fr.wikisource.org/wiki/Mystique">Arthur Rimbaud -- Mystique</a>
+    <h2>Paragraph (with childs)</h2>
+
+    <p class='poesie to-wrap anim-envol'>
+        Dans le chant de ma colère il y a un œuf,
+        Et dans cet œuf il y a ma mère, mon père et mes enfants,
+        Et dans ce tout il y a joie et tristesse mêlées, et vie.
+        Grosses tempêtes qui m'avez secouru,
+        Beau soleil qui m'as contrecarré,
+        Il y a haine en moi, forte et de date ancienne,
+        Et pour la beauté on verra plus tard.
+        Je ne suis, en effet, devenu dur que par lamelles;
+        Si l'on savait comme je suis resté moelleux au fond.
+        Je suis gong et ouate et chant neigeux,
+        Je le dis et j'en suis sûr.
+
+        HENRI MICHAUX
+
+        <a href="https://fr.wikipedia.org/wiki/Henri_Michaux">Henri Michaux</a>
+        <cite><a href="https://fr.wikipedia.org/wiki/Henri_Michaux">Henri Michaux</a></cite>
+    </p>
+
+    <h2>several kinds of blockquotes</h2>
+
+    <blockquote class='poesie to-wrap anim-deposer'>
+        ◇♼☤☢☠⚧⚣⚢⚤⚦⚥⚨⚭❤Je rêve aux images élémentaires, aux rêves que d'autres en d'autres situations, d'autres temps et lieux, en des corps différents surtout... ont pu avoir.
+
+        <footer>
+            — <cite><a href="https://fr.wikipedia.org/wiki/Henri_Michaux">Henri Michaux</a></cite>
+        </footer>
+    </blockquote>
+
+    <blockquote class="poesie to-wrap anim-deposer">« Un jour de l’an passé, sur le pont des Arts, quelqu’un de mes confrères de l’Institut se plaignit devant moi de l’ennui de vieillir. “C’est encore, lui répondit Sainte-Beuve, le seul moyen qu’on ait trouvé de vivre longtemps.” J’ai usé de ce moyen, et je sais ce qu’il vaut. »<footer class="toto">Anatole FRANCE, <cite>le Crime de Sylvestre Bonnard</cite>.</footer></blockquote>
+
+</article>
+
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<script>
+    textSlicer.wrapCharacters(document.querySelectorAll('.to-wrap'),'wrapped','span','wrapper');
+</script>
+
+</body>
+</html>

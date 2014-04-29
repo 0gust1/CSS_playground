@@ -46,28 +46,28 @@ module.exports = function(grunt) {
       },
       gruntfile: {
         src: 'Gruntfile.js'
-      },
-      lib_test: {
-        src: ['lib/**/*.js', 'test/**/*.js']
       }
     },
-    // qunit: {
-    //   files: ['test/**/*.html']
-    // },
+    autoprefixer: {
+        release : {
+            src:'css/perso.css',
+            dest:'css/perso.pr.css'
+        }
+    },
     watch: {
+      options: {
+            livereload: true
+      },
       gruntfile: {
         files: '<%= jshint.gruntfile.src %>',
         tasks: ['jshint:gruntfile']
       },
-      lib_test: {
-        files: '<%= jshint.lib_test.src %>',
-        tasks: ['jshint:lib_test', 'qunit']
-      },
+      autoprefixer: {
+            files: '<%= autoprefixer.release.src %>',
+            tasks: ['autoprefixer:release']
+        },
       demo: {
-        files: ['js/**/*.js', 'index.html', 'css/**/*.css', 'img/**/*.{"png","jpg","jpeg","svg"}'],
-        options: {
-          livereload: true
-        }
+        files: ['js/**/*.js', 'index.html', 'css/**/*.css', 'img/**/*.{"png","jpg","jpeg","svg"}']
       }
     },
     connect: {
@@ -92,16 +92,16 @@ module.exports = function(grunt) {
 
   // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-qunit');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify']);
+  grunt.registerTask('default', ['jshint']);
 
-  grunt.registerTask('server', ['connect:livereload', 'watch:demo']);
+  grunt.registerTask('server', ['connect:livereload', 'watch']);
 
 
 };
