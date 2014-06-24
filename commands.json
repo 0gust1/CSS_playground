@@ -1,0 +1,20 @@
+{
+  "name": "CSS Playground",
+  "tasks": [
+    {
+      "name": "Some example script #1",
+      "description": "a simple ping to google.com",
+      "cli_command": "ping google.com"
+    },
+    {
+      "name": "Exemple script #2",
+      "description": "does a `npm install` command (nodeJS required)",
+      "cli_command": "npm install"
+    },
+    {
+      "name": "Example script #3 - npm ls",
+      "description": "Display the nodeJs dependencies of your project",
+      "cli_command": "npm ls"
+    }
+  ]
+}

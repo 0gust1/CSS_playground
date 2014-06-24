@@ -69,7 +69,8 @@ h1{color: #e51a14; font-feature-settings:"frac" 1, "liga" 1, "dlig" 1, "hlig" 1,
     /*display: inline-block;position: fixed;*/
     line-height: 1em;
 	background-color: transparent;
-    transform: rotateZ(0);
+    /*transform: translateZ(0);*/
+    perspective: 1000;
 }
 
 
